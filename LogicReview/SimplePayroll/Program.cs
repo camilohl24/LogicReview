@@ -20,7 +20,7 @@ do
         Console.WriteLine($"Salary Month............: {salary:C2}");
     }
 
-    answer = ConsoleExtension.GetValidOptions("Deseas verificar otro empleado [S]i, [N]o : ", new List<string> { "S", "N" });
+    answer = ConsoleExtension.GetValidOptions("Do yoy want to chaeck another employee: ", new List<string> { "S", "N" });
 
 }
 while (answer == "s");
