@@ -7,7 +7,7 @@ do
     Console.WriteLine("________________Tuition Fee __________________");
    
     var creditsNumber = ConsoleExtension.GetInt("Number of credits to see.........: ");
-    var creditValue = ConsoleExtension.GetDouble("Credit value.....................: ");
+    var creditValue = ConsoleExtension.GetDecimal("Credit value.....................: ");
     var stratum = ConsoleExtension.GetInt("Stratum......................:");
     var tuitionFee = CalculateTuition(creditsNumber,creditValue,stratum);
     var subsidyAmount = CalculateSubsidy(stratum);
@@ -39,12 +39,12 @@ while (answer == "y");
     }
 }
 
-static double extraCredits(int creditsNumber,double creditValue )
+static decimal extraCredits(int creditsNumber,decimal creditValue )
 {
     if (creditsNumber > 20)
     {
         int extra = creditsNumber - 20;
-        return extra * (creditValue * 2);
+        return extra * (creditValue * 2m);
     }
     else
     {
@@ -52,7 +52,7 @@ static double extraCredits(int creditsNumber,double creditValue )
     }
 }
 
-static double NormalCredits(int creditsNumber, double creditValue)
+static decimal NormalCredits(int creditsNumber, decimal creditValue)
 {
     if (creditsNumber <= 20)
     {
@@ -60,10 +60,10 @@ static double NormalCredits(int creditsNumber, double creditValue)
     }
     else
     {
-        return  20 * creditValue;
+        return  20m * creditValue;
     }
 }
-static double CalculateTuition(int creditsNumber, double creditValue,int stratum)
+static decimal CalculateTuition(int creditsNumber, decimal creditValue,int stratum)
 {
     var extra = extraCredits(creditsNumber,creditValue);
     var normal = NormalCredits(creditsNumber,creditValue);
@@ -73,15 +73,19 @@ static double CalculateTuition(int creditsNumber, double creditValue,int stratum
 
     if (stratum == 1)
     {
-        valueToPay -= valueToPay * 0.80;
+        valueToPay -= valueToPay * 0.80m;
     }
     else if (stratum == 2)
     {
-        valueToPay -= valueToPay * 0.50;
+        valueToPay -= valueToPay * 0.50m;
+    }
+    if(stratum == 3) 
+    {
+        valueToPay -= valueToPay * 0.30m;
     }
     else
     {
-        valueToPay -= valueToPay * 0.30;
+        return valueToPay;
     }
 
     return valueToPay;
