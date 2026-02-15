@@ -5,6 +5,9 @@
   <Folder Name="/06/">
     <Project Path="DeskDiscount/DeskDiscount.csproj" Id="8539b74e-a7a5-4c8b-94d0-7317956f6994" />
   </Folder>
+  <Folder Name="/07/">
+    <Project Path="TuitionFee/TuitionFee.csproj" Id="f18e84da-2ef6-44b7-8024-faeb823ad4b3" />
+  </Folder>
   <Folder Name="/Shared/">
     <Project Path="ConsoleExtension/Shared.csproj" Id="cfe9dc7c-9c9e-4039-91e0-d7b6df39c4d6" />
   </Folder>
