@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/05/">
+    <Project Path="SimplePayroll/SimplePayroll.csproj" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="ConsoleExtension/Shared.csproj" Id="cfe9dc7c-9c9e-4039-91e0-d7b6df39c4d6" />
+  </Folder>
+</Solution>
