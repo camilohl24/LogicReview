@@ -8,6 +8,9 @@
   <Folder Name="/07/">
     <Project Path="TuitionFee/TuitionFee.csproj" Id="f18e84da-2ef6-44b7-8024-faeb823ad4b3" />
   </Folder>
+  <Folder Name="/08/">
+    <Project Path="ShipmentOfGoods/ShipmentOfGoods.csproj" Id="ec8a88bc-dfb1-4d79-9e3a-9f0edd8ff07f" />
+  </Folder>
   <Folder Name="/Shared/">
     <Project Path="ConsoleExtension/Shared.csproj" Id="cfe9dc7c-9c9e-4039-91e0-d7b6df39c4d6" />
   </Folder>
